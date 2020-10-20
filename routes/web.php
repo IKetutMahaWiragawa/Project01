@@ -26,7 +26,7 @@ Route::get('/show/{id?}', function($id=1){
 })->where ('id','[0-9]+');
 
 Route::get('/utama', function(){
-    echo "Ini page Utama";
+    echo "Ini Page Utama";
     echo "<br>";
     echo "<a href='".route('tentang')."'>About</a>";
 });
