@@ -22,7 +22,7 @@ Route::get('/aboutus', function(){
 })->name("tentang");
 
 Route::get('/show/{id?}', function($id=1){
-    echo "Parameter ID: " .$id;
+    echo "Parameter ID : " .$id;
 })->where ('id','[0-9]+');
 
 Route::get('/utama', function(){
