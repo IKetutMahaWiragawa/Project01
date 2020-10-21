@@ -6,6 +6,6 @@
     <body>
         <h2>Isi variabel Produk :</h2>
 
-        Produk: {{ $produk }}
+        Produk: {{ isset($produk)? $produk : "Variabel Produk Tidak Ada"}}
     </body>
 </html>

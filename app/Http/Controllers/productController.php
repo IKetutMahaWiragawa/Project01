@@ -10,7 +10,7 @@ class productController extends Controller
     public function index()
     {
         $produk = "Sepatu JN 325";
-        return view('produk/index',compact("produk"));
+        return view('produk/index');
     }
 
 }
