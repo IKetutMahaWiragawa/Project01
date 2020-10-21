@@ -31,7 +31,7 @@ Route::get('/utama', function(){
     echo "<a href='".route('tentang')."'>About</a>";
 });
 
-Route::get('/product',[productController::class,'index']);
+Route::get('/produk',[productController::class,'index']);
 
 Route::get("/latihanView01",function(){
     return view("latihan01");
