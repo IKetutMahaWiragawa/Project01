@@ -32,3 +32,7 @@ Route::get('/utama', function(){
 });
 
 Route::get('/product',[productController::class,'index']);
+
+Route::get("/latihanView01",function(){
+    return view("latihan01");
+});
