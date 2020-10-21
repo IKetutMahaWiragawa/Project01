@@ -36,3 +36,5 @@ Route::get('/produk',[productController::class,'index']);
 Route::get("/latihanView01",function(){
     return view("latihan01");
 });
+
+Route::get('/produk/showproduk',[productController::class,'showproduk']);
