@@ -38,3 +38,11 @@ Route::get("/latihanView01",function(){
 });
 
 Route::get('/produk/showproduk',[productController::class,'showproduk']);
+
+Route::get('/',function(){
+    return view('index');
+});
+
+Route::get('/about',function(){
+    return view('about');
+});
