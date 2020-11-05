@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\productController;
+use App\Http\Controllers\aboutController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -46,3 +47,5 @@ Route::get('/',function(){
 Route::get('/about',function(){
     return view('about');
 });
+
+Route::get("aboutController",[aboutController::class,'index']);
