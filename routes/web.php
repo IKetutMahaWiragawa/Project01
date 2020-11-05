@@ -48,5 +48,4 @@ Route::get('/about',function(){
     return view('about');
 });
 
-
 Route::get('aboutController',[aboutController::class,'index']);
