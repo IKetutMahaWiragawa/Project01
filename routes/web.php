@@ -13,9 +13,37 @@ use App\Http\Controllers\aboutController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/template', function () {
 
-Route::get('/', function () {
-    return view('welcome');
+    return view('desain/index');
+});
+
+Route::get('/index.html', function () {
+    $judul = 'Selamat Datang';
+    $konten = 'Selamat Datang di Website Saya, berikut ini merupakan halaman utama website';
+    return view('websiteku/home',compact('judul','konten'));
+});
+
+Route::get('/examples.html',function (){
+    $judul = 'Example';
+    $konten = 'Isi Konten Example';
+    return view ('websiteku/example',compact('judul','konten'));
+});
+
+Route::get('/page.html',function (){
+    $judul = 'Page';
+    $konten = 'Isi Konten Page';
+    return view ('websiteku/page',compact('judul','konten'));
+});
+Route::get('/another_page.html', function (){
+    $judul = 'Another Page';
+    $konten = 'Isi Konten Another Page';
+    return view ('websiteku/anotherpage',compact('judul','konten'));
+});
+Route::get('/contact.html', function (){
+    $judul = 'Contact Us';
+    $konten = 'Isi Konten Contact Us';
+    return view ('websiteku/contactus',compact('judul','konten'));
 });
 
 Route::get('/aboutus', function(){
