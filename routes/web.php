@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\productController;
 use App\Http\Controllers\aboutController;
+use App\Http\Controllers\produksController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -60,7 +61,7 @@ Route::get('/utama', function(){
     echo "<a href='".route('tentang')."'>About</a>";
 });
 
-Route::get('/produk',[productController::class,'index']);
+Route::get('/product',[productController::class,'index']);
 
 Route::get("/latihanView01",function(){
     return view("latihan01");
@@ -77,3 +78,5 @@ Route::get('/about',function(){
 });
 
 Route::get('aboutController',[aboutController::class,'index']);
+
+Route::get('/produk',[produksController::class,'index']);
