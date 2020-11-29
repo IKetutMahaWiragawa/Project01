@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\productController;
 use App\Http\Controllers\aboutController;
 use App\Http\Controllers\produksController;
+use App\Http\Controllers\kategoriController;
+use App\Http\Controllers\prak9Controller;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -79,4 +81,9 @@ Route::get('/about',function(){
 
 Route::get('aboutController',[aboutController::class,'index']);
 
-Route::get('/produk',[produksController::class,'index']);
+Route::get('/produks',[produksController::class,'index']);
+
+Route::get('/kategori',[kategoriController::class,'index']);
+
+Route::get('/prak9_01',[prak9Controller::class,'QB_tugas1']);
+

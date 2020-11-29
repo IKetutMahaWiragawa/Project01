@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Tabelkategori extends Migration
+class Kategori extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,7 @@ class Tabelkategori extends Migration
     public function up()
     {
         ////bagian restore data
-        schema::create('produks',function(Blueprint $tb){
+        schema::create('kategori',function(Blueprint $tb){
             $tb->increments('Id');
             $tb->string('Kategori',100);
             $tb->string('Keterangan',255);
@@ -30,6 +30,7 @@ class Tabelkategori extends Migration
     public function down()
     {
         //bagian drop data
-        schemma::dropIfExits ('produks');
+        schemma::dropIfExits ('kategori');
     }
 }
+
