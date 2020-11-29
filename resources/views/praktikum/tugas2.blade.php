@@ -5,7 +5,7 @@
 </head>
 <body>
     <h2>Data Produk Berdasarkan Kategori ID : {{$id_kat}}</b></h2>
-    Jumlah Data : {{$JRek}}
+    Jumlah Data : {{ $JRek }}
     <table border="1">
         <thead>
             <tr>
