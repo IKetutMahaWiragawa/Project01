@@ -6,6 +6,7 @@ use App\Http\Controllers\aboutController;
 use App\Http\Controllers\produksController;
 use App\Http\Controllers\kategoriController;
 use App\Http\Controllers\prak9Controller;
+use App\Http\Controllers\Prak10Controller;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -90,3 +91,6 @@ Route::get('/prak9_01',[prak9Controller::class,'QB_tugas1']);
 Route::get('/prak9_02',[prak9Controller::class,'QB_tugas2']);
 
 Route::get('/prak9_03',[prak9Controller::class,'QB_tugas3']);
+
+//Route Praktikum 10
+Route::resource('/prak10',Prak10Controller::class);
