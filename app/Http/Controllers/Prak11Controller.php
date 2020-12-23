@@ -92,7 +92,10 @@ class Prak11Controller extends Controller
      */
     public function edit($id)
     {
-        //
+        //menampilkan form dan data yang terletak di ubah
+        $DKat = kategori::get();
+        $eDit = produks::where('id',$id)->first();
+        return view ('praktikum11.edit',compact ('eDit','DKat'));
     }
 
     /**
@@ -104,7 +107,15 @@ class Prak11Controller extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        //untuk Proses Perubahan Data
+        produks::where('id',$id)->update([
+            'namaproduk'=>$request ->txProduk,
+            'harga_beli'=>$request->txHargaBeli,
+            'harga_jual'=> $request->txHargaJual,
+            'qty'=>$request ->txQTY,
+            'id_kat'=>$request ->txKat,
+        ]);
+        return redirect()->route('prak11.index');
     }
 
     /**
@@ -115,6 +126,8 @@ class Prak11Controller extends Controller
      */
     public function destroy($id)
     {
-        //
+        ////Proses Hapus Data
+        produks::where('id',$id)->delete();
+        return redirect()->route('prak11.index');
     }
 }

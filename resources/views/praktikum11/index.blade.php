@@ -25,6 +25,14 @@
       <td>{{$p->harga_beli}}</td>
       <td>{{$p->qty}}</td>
       <td><a class = "btn btn-outline-warning" href="{{route('prak11.edit',$p->id)}}">Edit</a></td>
+      <td><form method="post" action="{{route('prak11.destroy',$p->id)}}">
+        @csrf()
+        @method('DELETE')
+        <div class="btn btn-outline-danger">
+            <input type="submit" class="btn" name="btnkirim" value=" Delete ">
+        </div>
+        </form>
+      </td> 
     </tr>
     @endforeach
   </tbody>
