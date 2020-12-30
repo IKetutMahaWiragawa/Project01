@@ -3,12 +3,27 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Models\kategori;
 use App\Models\produks;
 
 
 class Prak11Controller extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+     /**
+     * Log the user out of the application.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    Public function logout()
+    {
+        Auth::logout();
+        return redirect('/prak11');
+    }
     /**
      * Display a listing of the resource.
      *

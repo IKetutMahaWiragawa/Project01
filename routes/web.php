@@ -74,6 +74,10 @@ Route::get("/latihanView01",function(){
 Route::get('/produk/showproduk',[productController::class,'showproduk']);
 
 Route::get('/',function(){
+    return view('welcome');
+});
+
+Route::get('/ind',function(){
     return view('index');
 });
 
@@ -97,3 +101,11 @@ Route::get('/prak9_03',[prak9Controller::class,'QB_tugas3']);
 Route::resource('/prak10',Prak10Controller::class);
 //Route Praktikum 11
 Route::resource('/prak11',Prak11Controller::class);
+
+//route untuk logout
+Route::get('/prak11/logout', [Prak11Controller::class,'logout'])->name('prak11.logout');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
+
