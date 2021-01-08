@@ -8,6 +8,7 @@ use App\Http\Controllers\kategoriController;
 use App\Http\Controllers\prak9Controller;
 use App\Http\Controllers\Prak10Controller;
 use App\Http\Controllers\Prak11Controller;
+use App\Http\Controllers\Prak14Controller;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -109,3 +110,5 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
+//Route untuk Graph
+Route::get('/prak14/ChartProdperKat' ,[Prak14Controller::class,'ChartProdperKat'])->name('prak14.ProdukperKategori');
