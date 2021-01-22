@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Kategori extends Migration
+class Jurusan extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class Kategori extends Migration
      */
     public function up()
     {
-        ////bagian restore data
-        schema::create('kategori', function (Blueprint $tb) {
-            $tb->increments('Id');
-            $tb->string('Kategori', 100);
-            $tb->string('Keterangan', 255);
+        //data jurusan
+        schema::create('jurusan', function (Blueprint $tb) {
+            $tb->string('kode', 8);
+            $tb->string('namajur', 50);
+            $tb->string('ketuajur', 50);
             $tb->timestamps();
         });
     }
@@ -29,7 +29,7 @@ class Kategori extends Migration
      */
     public function down()
     {
-        //bagian drop data
-        schema::dropIfExits('kategori');
+        //drop data jurusan
+        schema::dropIfExits('jurusan');
     }
 }
